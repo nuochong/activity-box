@@ -1,0 +1,37 @@
+{
+  "name": "activity-box",
+  "version": "0.0.1",
+  "description": "⚡️📌️ Update a gist to contain your recent activity",
+  "author": "Jason Etcovitch <jasonetco@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest --coverage",
+    "format": "prettier --write ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JasonEtco/activity-box.git"
+  },
+  "dependencies": {
+    "actions-toolkit": "^2.2.0",
+    "dotenv": "^8.1.0",
+    "gist-box": "^0.3.0"
+  },
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "nock": "^11.3.3",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ]
+  }
+}
